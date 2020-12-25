@@ -1,0 +1,7 @@
+.idea/
+__pycache__/
+nohup.out
+ran.py
+demo.txt
+*.pyc
+conclusion.py
