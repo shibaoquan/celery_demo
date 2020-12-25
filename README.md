@@ -1,5 +1,7 @@
 
 ## celery 学习
+### 官网文档
+https://www.celerycn.io/yong-hu-zhi-nan/ren-wu-tasks/ri-zhi-logging
 
 
 ##### 发布定时任务
