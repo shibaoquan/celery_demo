@@ -6,8 +6,9 @@
 """
 from datetime import timedelta
 
-broker_url = 'redis://root:123456@localhost/0'
-# result_backend = 'redis://root:123456@localhost/1'
+broker_url = 'redis://root:123456@localhost/0'  # 使用redis存储任务队列 也可以用rabitmq
+
+# result_backend = 'redis://root:123456@localhost/1'  # 用于存储任务的执行结果，以供查询
 
 task_serializer = 'json'
 result_serializer = 'json'
@@ -23,7 +24,7 @@ task_annotations = {
     'tasks.add': {'rate_limit': '10/m'}
 }
 
-# 导入任务模块
+# 导入任务模块py
 imports = [
     "tasks",
 ]

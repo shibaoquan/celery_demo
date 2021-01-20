@@ -8,7 +8,7 @@ import time
 
 import redis
 
-client = redis.Redis(host="127.0.0.1", port=6379, password="123456", db=3)
+client = redis.Redis(host="127.0.0.1", port=6379, password="123456", db=5)
 print(client)
 
 # 第一步 生成一个订阅者对象
@@ -18,9 +18,11 @@ pubsub = client.pubsub()
 pubsub.subscribe("channel")
 
 while True:
-    time.sleep(5)
     print("working~~~")
-    msg = pubsub.parse_response()
-    print(msg)
+    msg = pubsub.parse_response()  # 自己会阻塞，直到获取到值
+    print(f"获取到的msg：{msg}")
+
+
+
 
 
